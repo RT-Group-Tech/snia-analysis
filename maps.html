@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+
+    <title>Snia analysis </title>
+
+    <!-- vendor css -->
+    <link href="assets/lib/%40fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="assets/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="assets/lib/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <!-- vendor css -->
+
+    <!-- DashForge CSS -->
+    <link rel="stylesheet" href="assets/css/dashforge.css">
+    <link rel="stylesheet" href="assets/css/dashforge.dashboard.css">
+    <link rel="stylesheet" href="assets/css/skin.cool.css">
+    <link rel="stylesheet" href="assets/css/skin.deepblue.css">
+    <link rel="stylesheet" href="assets/lib/leaflet/leaflet.css">
+    <!-- <link rel="stylesheet" href="assets/css/skin.dark.css"> -->
+</head>
+
+<body class="page-profile">
+
+    <!-- navabar -->
+    <header class="navbar navbar-header navbar-header-fixed">
+        <a href="#" id="mainMenuOpen" class="burger-menu"><i data-feather="menu"></i></a>
+        <div class="navbar-brand">
+            <a href="javascript:void(0)" class="df-logo">Snia <span> Analysis</span></a>
+        </div>
+        <!-- navbar-brand -->
+        <div id="navbarMenu" class="navbar-menu-wrapper">
+            <div class="navbar-menu-header">
+                <a href="javascript:void(0)" class="df-logo">Snia <span> Analysis</span></a>
+                <a id="mainMenuClose" href="#"><i data-feather="x"></i></a>
+            </div>
+            <!-- navbar-menu-header -->
+            <ul class="nav navbar-menu">
+                <li class="nav-label pd-l-20 pd-lg-l-25 d-lg-none">Main Navigation</li>
+                <li class="nav-item with-sub active">
+                    <a href="#" class="nav-link"><i data-feather="pie-chart"></i> Types d'analyses</a>
+                    <ul class="navbar-menu-sub">
+                        <li class="nav-sub-item"><a href="./index.html" class="nav-sub-link"><i
+                                    data-feather="bar-chart-2"></i>Productions</a></li>
+                        <li class="nav-sub-item"><a href="./index_2.html" class="nav-sub-link"><i
+                                    data-feather="bar-chart-2"></i>Recoltes</a></li>
+                        <li class="nav-sub-item"><a href="./index_3.html" class="nav-sub-link"><i
+                                    data-feather="bar-chart-2"></i>Semences</a></li>
+                        <li class="nav-sub-item"><a href="#" class="nav-sub-link"><i
+                                    data-feather="bar-chart-2"></i>Fertilisants</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item with-sub">
+                    <a href="#" class="nav-link"><i data-feather="package"></i>Formulaires</a>
+                    <ul class="navbar-menu-sub">
+                        <li class="nav-sub-item"><a href="#" class="nav-sub-link"><i
+                                    data-feather="bar-chart-2"></i>Formul.1</a></li>
+                        <li class="nav-sub-item"><a href="#" class="nav-sub-link"><i
+                                    data-feather="bar-chart-2"></i>Formul.2</a></li>
+                        <li class="nav-sub-item"><a href="#" class="nav-sub-link"><i
+                                    data-feather="bar-chart-2"></i>Formul.3</a></li>
+                        <li class="nav-sub-item"><a href="#" class="nav-sub-link"><i
+                                    data-feather="bar-chart-2"></i>Formul.4</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item"><a href="#" class="nav-link"><i data-feather="box"></i>
+                        Cartographie
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- navbar-menu-wrapper -->
+        <div class="navbar-right">
+            <a id="navbarSearch" href="#" class="search-link"><i data-feather="search"></i></a>
+
+            <!-- user profil -->
+            <div class="dropdown dropdown-profile">
+                <a href="#" class="dropdown-link" data-bs-toggle="dropdown" data-display="static">
+                    <div class="avatar avatar-sm"><img src="assets/img/placehold.jpg" class="rounded-circle" alt="">
+                    </div>
+                </a>
+                <!-- dropdown-link -->
+                <div class="dropdown-menu dropdown-menu-end tx-13">
+                    <div class="avatar avatar-lg mg-b-15"><img src="assets/img/placehold.jpg" class="rounded-circle"
+                            alt="">
+                    </div>
+                    <h6 class="tx-semibold mg-b-5">Gaston Delimond</h6>
+                    <p class="mg-b-25 tx-12 tx-color-03">gastondelimond@developer.com</p>
+
+                    <a href="#" class="dropdown-item"><i data-feather="edit-3"></i> Editer Profil</a>
+                    <a href="#" class="dropdown-item"><i data-feather="user"></i> Voir Profil</a>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" class="dropdown-item"><i data-feather="help-circle"></i> Aide
+                        Center</a>
+                    <a href="#" class="dropdown-item"><i data-feather="life-buoy"></i> Forum</a>
+                    <a href="#" class="dropdown-item"><i data-feather="settings"></i>Paramètres du compte</a>
+                    <a href="#" class="dropdown-item"><i data-feather="settings"></i>Paramètres privés</a>
+                    <a href="#" class="dropdown-item"><i data-feather="log-out"></i>Deconnexion</a>
+                </div>
+                <!-- dropdown-menu -->
+            </div>
+            <!-- user profil -->
+        </div>
+        <!-- navbar-right -->
+        <div class="navbar-search">
+            <div class="navbar-search-header">
+                <input type="search" class="form-control" placeholder="Entrez un mot pour rechercher...">
+                <button class="btn"><i data-feather="search"></i></button>
+                <a id="navbarSearchClose" href="#" class="link-03 mg-l-5 mg-lg-l-10"><i data-feather="x"></i></a>
+            </div>
+            <!-- navbar-search-header -->
+            <div class="navbar-search-body">
+                <label
+                    class="tx-10 tx-medium tx-uppercase tx-spacing-1 tx-color-03 mg-b-10 d-flex align-items-center">Recherches
+                    recents</label>
+                <ul class="list-unstyled">
+                    <li><a href="dashboard-one.html">modern dashboard</a></li>
+                    <li><a href="app-calendar.html">calendar app</a></li>
+                    <li><a href="collections/modal.html">modal examples</a></li>
+                    <li><a href="components/el-avatar.html">avatar</a></li>
+                </ul>
+
+                <hr class="mg-y-10 bd-0">
+
+                <label
+                    class="tx-10 tx-medium tx-uppercase tx-spacing-1 tx-color-03 mg-b-10 d-flex align-items-center">Recherche
+                    suggestions</label>
+
+                <ul class="list-unstyled">
+                    <li><a href="dashboard-one.html">cryptocurrency</a></li>
+                    <li><a href="app-calendar.html">button groups</a></li>
+                    <li><a href="collections/modal.html">form elements</a></li>
+                    <li><a href="components/el-avatar.html">contact app</a></li>
+                </ul>
+            </div>
+            <!-- navbar-search-body -->
+        </div>
+        <!-- navbar-search -->
+    </header>
+    <!-- navbar -->
+
+
+    <!-- content -->
+    <div class="content content-fixed">
+        <div class="container pd-x-0 pd-lg-x-10 pd-xl-x-0">
+            <div class="d-sm-flex align-items-center justify-content-between mg-b-20 mg-lg-b-30">
+                <div>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb breadcrumb-style1 mg-b-10">
+                            <li class="breadcrumb-item"><a href="#">Tableau de bord</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Cartographie</li>
+                        </ol>
+                    </nav>
+                    <h4 class="mg-b-0 tx-spacing--1">Analyses Cartographiques </h4>
+                </div>
+                <div class="d-none d-md-block">
+                    <button class="btn pd-x-15 mg-l-5 btn-sm  btn-white btn-uppercase dropdown-toggle" type="button"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i data-feather="filter" class="wd-10 mg-r-5"></i> Filtrer
+                    </button>
+                    <div class="dropdown-menu tx-13">
+                        <h6 class="dropdown-header tx-uppercase tx-11 tx-bold tx-inverse tx-spacing-1">Sélectionnez un
+                            filtre
+                        </h6>
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                    <button class="btn pd-x-15 mg-l-5 btn-sm  btn-white btn-uppercase dropdown-toggle" type="button"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-ellipsis-h wd-10 mg-r-5"></i> Autres
+                    </button>
+                    <div class="dropdown-menu tx-13">
+                        <h6 class="dropdown-header tx-uppercase tx-11 tx-bold tx-inverse tx-spacing-1">Autres analyses
+                        </h6>
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                    <button class="btn pd-x-15 mg-l-5 btn-sm  btn-primary btn-uppercase dropdown-toggle" type="button"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i data-feather="share" class="wd-10 mg-r-5"></i> Extraire
+                    </button>
+                    <div class="dropdown-menu tx-13">
+                        <h6 class="dropdown-header tx-uppercase tx-11 tx-bold tx-inverse tx-spacing-1">Extraire cette
+                            analyse
+                        </h6>
+                        <a class="dropdown-item" href="#"> <i class="far fa-file-pdf wd-10 mg-r-5"></i> Pdf</a>
+                        <a class="dropdown-item" href="#"><i class="far fa-file-word wd-10 mg-r-5"></i>Document word</a>
+                        <a class="dropdown-item" href="#"><i class="far fa-file-excel wd-10 mg-r-5"></i>Excel</a>
+                    </div>
+                    <button class="btn pd-x-15 mg-l-5 btn-sm  btn-brand-01 btn-uppercase" type="button">
+                        <i data-feather="share-2" class="wd-10 mg-r-5"></i> Partage
+                    </button>
+                </div>
+            </div>
+
+            <div class="row g-2">
+                <!-- col -->
+                <div class="col-lg-6 mg-t-10">
+                    <div class="card">
+                        <div class="card-header d-flex align-items-start justify-content-between">
+                            <h6 class="lh-5 mg-b-0">Cartographie de recolte</h6>
+                            <a href="#" class="tx-13 link-03 d-flex align-items-center"><i class="fa fa-ellipsis-v"></i>
+                            </a>
+                        </div>
+                        <!-- card-header -->
+                        <div class="card-body pd-y-15 pd-x-10">
+                            <div id="leaflet1" class="ht-300"></div>
+                        </div>
+                        <!-- card-body -->
+                    </div>
+                    <!-- card -->
+                </div>
+                <!-- col -->
+                <!-- col -->
+                <div class="col-lg-6 mg-t-10">
+                    <div class="card">
+                        <div class="card-header d-flex align-items-start justify-content-between">
+                            <h6 class="lh-5 mg-b-0">Visualisation semencières</h6>
+                            <a href="#" class="tx-13 link-03 d-flex align-items-center"><i class="fa fa-ellipsis-v"></i>
+                            </a>
+                        </div>
+                        <!-- card-header -->
+                        <div class="card-body pd-y-15 pd-x-10">
+                            <div id="leaflet2" class="ht-300"></div>
+                        </div>
+                        <!-- card-body -->
+                    </div>
+                    <!-- card -->
+                </div>
+                <!-- col -->
+
+                <div class="col-lg-6 mg-t-10">
+                    <div class="card">
+                        <div class="card-header d-flex align-items-start justify-content-between">
+                            <h6 class="lh-5 mg-b-0">Visualisation de la production</h6>
+                            <a href="#" class="tx-13 link-03 d-flex align-items-center"><i class="fa fa-ellipsis-v"></i>
+                            </a>
+                        </div>
+                        <!-- card-header -->
+                        <div class="card-body pd-y-15 pd-x-10">
+                            <div id="leaflet3" class="ht-300"></div>
+                        </div>
+                        <!-- card-body -->
+                    </div>
+                    <!-- card -->
+                </div>
+                <div class="col-lg-6 mg-t-10">
+                    <div class="card">
+                        <div class="card-header d-flex align-items-start justify-content-between">
+                            <h6 class="lh-5 mg-b-0">Visualisation Fertilisants</h6>
+                            <a href="#" class="tx-13 link-03 d-flex align-items-center"><i class="fa fa-ellipsis-v"></i>
+                            </a>
+                        </div>
+                        <!-- card-header -->
+                        <div class="card-body pd-y-15 pd-x-10">
+                            <div id="leaflet4" class="ht-300"></div>
+                        </div>
+                        <!-- card-body -->
+                    </div>
+                    <!-- card -->
+                </div>
+            </div>
+            <!-- row -->
+        </div>
+        <!-- container -->
+    </div>
+    <!-- content -->
+
+    <footer class="footer">
+        <div>
+            <span>Snia analysis </span>
+            <span>Created by <a href="#">RT GROUP SARL</a></span>
+        </div>
+        <div>
+            <nav class="nav">
+                <a href="#" class="nav-link">Politiques de confidentialités</a>
+
+                <a href="#" class="nav-link">Aide</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="assets/lib/jquery/jquery.min.js"></script>
+    <script src="assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/lib/feather-icons/feather.min.js"></script>
+    <script src="assets/lib/ionicons/ionicons/ionicons.esm.js" type="module"></script>
+    <script src="assets/lib/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="assets/lib/jquery.flot/jquery.flot.js"></script>
+    <script src="assets/lib/jquery.flot/jquery.flot.stack.js"></script>
+    <script src="assets/lib/jquery.flot/jquery.flot.resize.js"></script>
+    <script src="assets/lib/flot.curvedlines/curvedLines.js"></script>
+    <script src="assets/lib/peity/jquery.peity.min.js"></script>
+    <script src="assets/lib/chart.js/Chart.bundle.min.js"></script>
+    <script src="assets/lib/leaflet/leaflet.js"></script>
+    <script>
+        for (let i = 0; i < 4; i++) {
+            let index = i + 1;
+            const map = L.map(`leaflet${index}`).setView([4824659755, -5.90417819], 13);
+
+            const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '© OpenStreetMap'
+            }).addTo(map);
+        }
+    </script>
+    <script src="assets/js/dashforge.js"></script>
+    <script src="assets/js/dashforge.sampledata.js"></script>
+    <script src="assets/js/dashboard-four.js"></script>
+</body>
+
+</html>
