@@ -1,7 +1,7 @@
 <template>
   <div>
     <nav class="navbar navbar-expand-lg navbar-light bg-light bg-gradinent sticky-top">
-      <a class="navbar-brand text-white title-margin logo" href="#" >Wealth Management</a>
+      <a class="navbar-brand text-white title-margin logo" href="#" >Snia</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -86,7 +86,7 @@
               
               <div class="col-lg col-md-6 col-sm-6 mb-4">
                 <SmallStatsBlock 
-                  stateblockname="Total Assets" 
+                  stateblockname="Total Agriculteurs"
                   :data = "item"
                   :measureFilterValues = "measureFilterValues"
                   :prior = "prior"
@@ -97,7 +97,7 @@
               </div>
               <div class="col-lg col-md-6 col-sm-6 mb-4">
                 <SmallStatsBlock 
-                  stateblockname="Total Revenue" 
+                  stateblockname="Total Menages"
                   :data = "item"
                   :measureFilterValues = "measureFilterValues"
                   :prior = "prior"
@@ -108,7 +108,7 @@
               </div>
               <div class="col-lg col-md-4 col-sm-6 mb-4">
                 <SmallStatsBlock 
-                  stateblockname="Total Sales" 
+                  stateblockname="Suffisance alimentaire"
                   :data = "item"
                   :measureFilterValues = "measureFilterValues"
                   :prior = "prior"
@@ -119,7 +119,7 @@
               </div>
               <div class="col-lg col-md-4 col-sm-6 mb-4">
                 <SmallStatsBlock 
-                  stateblockname="Total ACAT" 
+                  stateblockname="Agents agricoles"
                   :data = "item"
                   :measureFilterValues = "measureFilterValues"
                   :prior = "prior"
@@ -130,7 +130,7 @@
               </div>
               <div class="col-lg col-md-4 col-sm-12 mb-4">
                 <SmallStatsBlock 
-                  stateblockname="Total FAS" 
+                  stateblockname="Total Attaques"
                   :data = "item"
                   :measureFilterValues = "measureFilterValues"
                   :prior = "prior"
@@ -207,7 +207,7 @@ export default {
       item : [],
       pageheaderdata: {
         pageName: "Dashboard",
-        dashboardName: "Wealth Management"
+        dashboardName: "Snia"
       },
       measure: "Asset Under Management",
       prior: "Month",
