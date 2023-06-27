@@ -1,6 +1,6 @@
 <template>
   <div id="chart">
-    <apexchart type="scatter" height="350" :options="chartOptions" :series="series"></apexchart>
+    <apexchart type="scatter" height="550" :options="chartOptions" :series="series"></apexchart>
   </div>
 </template>
 
@@ -10,35 +10,21 @@ name: "ScatterChart",
   data(){
     return{
       series: [{
-        name: 'TEAM 1',
+        name: 'Semis',
         data: this.generateDayWiseTimeSeries(new Date('11 Feb 2017 GMT').getTime(), 20, {
           min: 10,
           max: 60
         })
       },
         {
-          name: 'TEAM 2',
+          name: 'Recoltes',
           data: this.generateDayWiseTimeSeries(new Date('11 Feb 2017 GMT').getTime(), 20, {
             min: 10,
             max: 60
           })
         },
         {
-          name: 'TEAM 3',
-          data: this.generateDayWiseTimeSeries(new Date('11 Feb 2017 GMT').getTime(), 30, {
-            min: 10,
-            max: 60
-          })
-        },
-        {
-          name: 'TEAM 4',
-          data: this.generateDayWiseTimeSeries(new Date('11 Feb 2017 GMT').getTime(), 10, {
-            min: 10,
-            max: 60
-          })
-        },
-        {
-          name: 'TEAM 5',
+          name: 'Attaques',
           data: this.generateDayWiseTimeSeries(new Date('11 Feb 2017 GMT').getTime(), 30, {
             min: 10,
             max: 60
@@ -47,11 +33,15 @@ name: "ScatterChart",
       ],
       chartOptions: {
         chart: {
-          height: 350,
+          height: 550,
           type: 'scatter',
           zoom: {
             type: 'xy'
           }
+        },
+        title: {
+          text: 'Semis vs Recoltes vs Attaques',
+          align: 'left'
         },
         dataLabels: {
           enabled: false
@@ -72,7 +62,7 @@ name: "ScatterChart",
           type: 'datetime',
         },
         yaxis: {
-          max: 70
+          max: 100
         }
       },
 
