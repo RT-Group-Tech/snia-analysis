@@ -9,7 +9,7 @@
         <div class="row container-filter">
           <div class="col-sm-12 col-md-4">
             <div class="text-center py-2 pb-3">
-              <span class="text-white text-center">Select Measure</span>
+              <span class="text-white text-center">Selectionner donnee</span>
               <select class="custom-select custom-select-sm mt-1 text-center select-boxes1" style="" 
               v-model="measure"
               @change="getMeasureSelector()">
@@ -24,7 +24,7 @@
           </div>
           <div class="col-sm-12 col-md-4 ">
             <div class="text-center py-2">
-              <span class="text-white text-center">Compare to Prior</span>
+              <span class="text-white text-center">Periode debut</span>
               <select class="custom-select custom-select-sm mt-1 text-center select-boxes2" style="" 
               v-model="prior" @change="getPriorSelector()">
                   <!-- <option selected="" value="Year">Year</option> -->
@@ -35,7 +35,7 @@
           </div>
           <div class="col-sm-12 col-md-4 ">
             <div class="text-center py-2">
-              <span class="text-white text-center">Choose {{ prior }} for Comparision</span>
+              <span class="text-white text-center">Periode fin</span>
               <select v-if="prior=='Month'" class="custom-select custom-select-sm mt-1 text-center select-boxes3" 
               v-model="date" @change="getdateSelector()">
                 <option value="1-1-2011">Jan-2011</option>
@@ -145,85 +145,40 @@
             <div class="row">
               
               <div class="col-lg-6 col-md-12 col-sm-12 mb-4">
-                <RenderChart 
-                    containertitle='State' 
-                    :measure = 'measure'
-                    :data = "item"
-                    :measureFilterValues = "measureFilterValues"
-                    :prior = "prior"
-                    :date = "selectedDate"
-                    :mapConfig = "statewiseMapConfig"
-                    containerId = "state"
-                    :filterApplied = filterApplied
-                    :currentMesure = currentMesure
-                    :previousMeasure = previousMeasure
-                />
+                <div id="containerId" class="h-100">
+                  <div class="card card-small">
+                    <div class="card-body mt-0 pt-0" >
+                      <barChart></barChart>
+                    </div>
+                  </div>
+                </div>
+
               </div> 
               
               <div class="col-lg-6 col-md-12 col-sm-12 mb-4">
-                <RenderChart 
-                    containertitle='Top Advisors'
-                    :measure = 'measure' 
-                    :data = "item"
-                    :measureFilterValues = "measureFilterValues"
-                    :prior = "prior"
-                    :date = "selectedDate"
-                    :mapConfig = "advisorwiseMapConfig"
-                    containerId = "advisors"
-                    :filterApplied = filterApplied
-                    :currentMesure = currentMesure
-                    :previousMeasure = previousMeasure
-                />
+                <div id="containerId" class="h-100">
+                  <div class="card card-small">
+                    <div class="card-body mt-0 pt-0" >
+                      <lineChart></lineChart>
+                    </div>
+                  </div>
+                </div>
               </div>
-              
-              <div class="col-lg-4 col-md-12 col-sm-12 mb-4">
-                <RenderChart 
-                    containertitle='Region'
-                    :measure = 'measure'
-                    :data = "item"
-                    :measureFilterValues = "measureFilterValues" 
-                    :prior = "prior"
-                    :date = "selectedDate"
-                    :mapConfig = "regionwiseMapConfig"
-                    containerId = "regionswise"
-                    :filterApplied = filterApplied
-                    :currentMesure = currentMesure
-                    :previousMeasure = previousMeasure
-                />
-              </div>
-              
-              <div class="col-lg-4 col-md-12 col-sm-12 mb-4">
-                <RenderChart 
-                    containertitle='Time' 
-                    :measure = 'measure'
-                    :data = "item"
-                    :measureFilterValues = "measureFilterValues" 
-                    :prior = "prior"
-                    :date = "selectedDate"
-                    :mapConfig = "regionwiseMonthlyMapConfig"
-                    containerId = "overtime"
-                    :filterApplied = filterApplied
-                    :currentMesure = currentMesure
-                    :previousMeasure = previousMeasure
-                />
-              </div>
-              
-              <div class="col-lg-4 col-md-12 col-sm-12 mb-4">
-                  <RenderChart 
-                    containertitle='Product' 
-                    :measure = 'measure'
-                    :data = "item"
-                    :prior = "prior"
-                    :date = "selectedDate"
-                    :measureFilterValues = "measureFilterValues" 
-                    :mapConfig = "productwiseMapConfig"
-                    containerId = "product"
-                    :filterApplied = filterApplied
-                    :currentMesure = currentMesure
-                    :previousMeasure = previousMeasure
-                  />
-              </div>
+
+
+
              
+            </div>
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <div id="containerId" class="h-100" >
+                  <div class="card card-small">
+                    <div class="card-body mt-0 pt-0" >
+                      <scatterChart></scatterChart>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <!-- End Chart Area -->
           </div>
@@ -239,6 +194,9 @@ import RenderChart from "../components/RenderChart.vue";
 import SmallStatsBlock from "../components/SmallStats.vue";
 import { baseUrl } from '../../vue.config';
 import commonJs from "../util/common";
+import barChart from "../components/charts/BarChart";
+import lineChart from "../components/charts/LineChart";
+import scatterChart from "../components/charts/ScatterChart";
 
 export default {
   name: "WealthManagementDashboard",
@@ -354,7 +312,10 @@ export default {
   components: {
     RenderChart,
     SmallStatsBlock,
-    PageHeader
+    PageHeader,
+    barChart,
+    lineChart,
+    scatterChart
   },
 
   methods: {
