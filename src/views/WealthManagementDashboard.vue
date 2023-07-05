@@ -13,12 +13,8 @@
               <select class="custom-select custom-select-sm mt-1 text-center select-boxes1" style="" 
               v-model="measure"
               @change="getMeasureSelector()">
-                  <option value="Asset Under Management" selected>Asset Under Management</option>
-                  <option value="Revenue">Revenue</option>
-                  <option value="Sales">Sales</option>
-                  <option value="New Net Money">Net New Money</option>
-                  <option value="ACATS">ACATS</option>
-                  <option value="FAS">FAS</option>
+                  <option value="Asset Under Management" selected>Riz</option>
+                  <option value="Revenue">Mais</option>
               </select>
             </div>
           </div>
@@ -28,8 +24,10 @@
               <select class="custom-select custom-select-sm mt-1 text-center select-boxes2" style="" 
               v-model="prior" @change="getPriorSelector()">
                   <!-- <option selected="" value="Year">Year</option> -->
-                  <option value="Quarter">Quarter</option>
-                  <option value="Month">Month</option>
+                <option value="Month">Mensuel</option>
+                <option value="Quarter">Trimestriel</option>
+                <option value="Year">Annuel</option>
+
               </select>
             </div>
           </div>
@@ -38,28 +36,13 @@
               <span class="text-white text-center">Periode fin</span>
               <select v-if="prior=='Month'" class="custom-select custom-select-sm mt-1 text-center select-boxes3" 
               v-model="date" @change="getdateSelector()">
-                <option value="1-1-2011">Jan-2011</option>
-                <option value="2-1-2011">Feb-2011</option>
-                <option value="3-1-2011">Mar-2011</option>
-                <option value="4-1-2011">Apr-2011</option>
-                <option value="5-1-2011">May-2011</option>
-                <option value="6-1-2011">Jun-2011</option>
-                <option value="7-1-2011">Jul-2011</option>
-                <option value="8-1-2011">Aug-2011</option>
-                <option value="9-1-2011">Sep-2011</option>
-                <option value="10-1-2011">Oct-2011</option>
-                <option value="11-1-2011">Nov-2011</option>
-                <option value="12-1-2011">Dec-2011</option>
-                <option value="1-1-2012">Jan-2012</option>
-                <option value="2-1-2012">Feb-2012</option>
-                <option value="3-1-2012">Mar-2012</option>
-                <option value="4-1-2012">Apr-2012</option>
-                <option value="5-1-2012">May-2012</option>
-                <option value="6-1-2012">Jun-2012</option>
-                <option value="7-1-2012">Jul-2012</option>
-                <option value="8-1-2012">Aug-2012</option>
-                <option value="9-1-2012">Sep-2012</option>
-                <option value="10-1-2012">Oct-2012</option>
+                <option value="1-1-2011">Jan-2023</option>
+                <option value="2-1-2011">Fev-2023</option>
+                <option value="3-1-2011">Mar-2023</option>
+                <option value="4-1-2011">Apr-2023</option>
+                <option value="5-1-2011">Mai-2023</option>
+                <option value="6-1-2011">Juin-2013</option>
+                
               </select>
               <select v-if="prior=='Quarter'" class="custom-select custom-select-sm mt-1 text-center select-boxes3"  
               v-model="date" @change="getdateSelector()">
@@ -86,7 +69,7 @@
               
               <div class="col-lg col-md-6 col-sm-6 mb-4">
                 <SmallStatsBlock 
-                  stateblockname="Total Agriculteurs"
+                  stateblockname="Semis"
                   :data = "item"
                   :measureFilterValues = "measureFilterValues"
                   :prior = "prior"
@@ -97,7 +80,7 @@
               </div>
               <div class="col-lg col-md-6 col-sm-6 mb-4">
                 <SmallStatsBlock 
-                  stateblockname="Total Menages"
+                  stateblockname="Menages Agricoles"
                   :data = "item"
                   :measureFilterValues = "measureFilterValues"
                   :prior = "prior"
@@ -119,7 +102,7 @@
               </div>
               <div class="col-lg col-md-4 col-sm-6 mb-4">
                 <SmallStatsBlock 
-                  stateblockname="Agents agricoles"
+                  stateblockname="Production"
                   :data = "item"
                   :measureFilterValues = "measureFilterValues"
                   :prior = "prior"
