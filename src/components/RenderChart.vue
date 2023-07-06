@@ -15,7 +15,7 @@
   </div>
 </template>
 <script>
-  
+  /**
   import FusionCharts from "fusioncharts/core";
   import overlappedBar2d from 'fusioncharts/viz/overlappedbar2d';
   import scrollcombidy2d from 'fusioncharts/viz/scrollcombidy2d';
@@ -860,4 +860,5 @@
       },
     },
   }
+ */
 </script>

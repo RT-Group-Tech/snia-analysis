@@ -173,9 +173,9 @@
 
 <script>
 import PageHeader from "../components/PageHeader.vue";
-import RenderChart from "../components/RenderChart.vue";
+//import RenderChart from "../components/RenderChart.vue";
 import SmallStatsBlock from "../components/SmallStats.vue";
-import { baseUrl } from '../../vue.config';
+//import { baseUrl } from '../../vue.config';
 import commonJs from "../util/common";
 import barChart from "../components/charts/BarChart";
 import lineChart from "../components/charts/LineChart";
@@ -273,11 +273,11 @@ export default {
   },
 
   async created() {
-    fetch(`${baseUrl}/output.json`).then(response => {
+    /**fetch(`${baseUrl}/output.json`).then(response => {
       return response.json().then(json => {
         this.item= json;
       })
-    })
+    })*/
   },
   computed: {
     hasFilter () {
@@ -293,7 +293,7 @@ export default {
   },
 
   components: {
-    RenderChart,
+    //RenderChart,
     SmallStatsBlock,
     PageHeader,
     barChart,
