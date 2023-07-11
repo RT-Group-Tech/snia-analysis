@@ -10,7 +10,7 @@
         <div class="row container-filter">
           <div class="col-sm-12 col-md-3">
             <div class="text-center py-2 pb-3">
-              <span class="text-white text-center">Donnee</span>
+              <span class="text-white text-center">Donnée</span>
               <select class="custom-select custom-select-sm mt-1 text-center select-boxes1" style="" v-model="measure"
                 @change="getMeasureSelector()">
                 <option value="Asset Under Management" selected>Riz</option>
@@ -23,7 +23,7 @@
             <div class="text-center py-2 pb-3">
               <span class="text-white text-center">Province</span>
               <select class="custom-select custom-select-sm mt-1 text-center select-boxes1" style="" v-model="measure"
-                      @change="getMeasureSelector()">
+                @change="getMeasureSelector()">
                 <option value="Asset Under Management" selected>Haut-Katanga</option>
                 <option value="Revenue">Kasai</option>
               </select>
@@ -31,7 +31,7 @@
           </div>
           <div class="col-sm-12 col-md-3 ">
             <div class="text-center py-2">
-              <span class="text-white text-center">Periodicite</span>
+              <span class="text-white text-center">Périodicité</span>
               <select class="custom-select custom-select-sm mt-1 text-center select-boxes2" style="" v-model="prior"
                 @change="getPriorSelector()">
                 <!-- <option selected="" value="Year">Year</option> -->
@@ -44,7 +44,7 @@
           </div>
           <div class="col-sm-12 col-md-3 ">
             <div class="text-center py-2">
-              <span class="text-white text-center">Periode fin</span>
+              <span class="text-white text-center">Période fin</span>
               <select v-if="prior == 'Month'" class="custom-select custom-select-sm mt-1 text-center select-boxes3"
                 v-model="date" @change="getdateSelector()">
                 <option value="1-1-2011">Jan-2023</option>
@@ -97,7 +97,7 @@
                   :prior="prior" :date="selectedDate" blockConfig="ACAT" :filterApplied=filterApplied />
               </div>
               <div class="col-lg col-md-4 col-sm-12 mb-4">
-                <SmallStatsBlock stateblockname="Total Attaques" :data="item" :measureFilterValues="measureFilterValues"
+                <SmallStatsBlock stateblockname="Attaques" :data="item" :measureFilterValues="measureFilterValues"
                   :prior="prior" :date="selectedDate" blockConfig="FA" :filterApplied=filterApplied />
               </div>
             </div>
