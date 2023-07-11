@@ -7,8 +7,8 @@
 <script>
 export default {
   name: "BarChart",
-  data(){
-    return{
+  data() {
+    return {
       series: [{
         name: 'Semis',
         data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
@@ -54,9 +54,9 @@ export default {
         },
         tooltip: {
           y: {
-            formatter: function (val) {
+            /* formatter: function (val) {
              // return "$ " + val + " thousands"
-            }
+            } */
           }
         }
       },
@@ -66,6 +66,4 @@ export default {
 }
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
