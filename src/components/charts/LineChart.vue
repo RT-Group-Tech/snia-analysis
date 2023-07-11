@@ -11,7 +11,7 @@ export default {
     return {
       series: [{
         name: '',
-        data: [30, 40, 45, 50, 49, 45, 0, 9]
+        data: [30, 40, 45, 50, 49, 45, 20, 30]
       }],
       chartOptions: {
         chart: {

@@ -8,19 +8,30 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <div class="row container-filter">
-          <div class="col-sm-12 col-md-4">
+          <div class="col-sm-12 col-md-3">
             <div class="text-center py-2 pb-3">
-              <span class="text-white text-center">Selectionner donnee</span>
+              <span class="text-white text-center">Donnee</span>
               <select class="custom-select custom-select-sm mt-1 text-center select-boxes1" style="" v-model="measure"
                 @change="getMeasureSelector()">
                 <option value="Asset Under Management" selected>Riz</option>
                 <option value="Revenue">Mais</option>
+                <option value="Revenue">Manioc</option>
               </select>
             </div>
           </div>
-          <div class="col-sm-12 col-md-4 ">
+          <div class="col-sm-12 col-md-3">
+            <div class="text-center py-2 pb-3">
+              <span class="text-white text-center">Province</span>
+              <select class="custom-select custom-select-sm mt-1 text-center select-boxes1" style="" v-model="measure"
+                      @change="getMeasureSelector()">
+                <option value="Asset Under Management" selected>Haut-Katanga</option>
+                <option value="Revenue">Kasai</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-3 ">
             <div class="text-center py-2">
-              <span class="text-white text-center">Periode debut</span>
+              <span class="text-white text-center">Periodicite</span>
               <select class="custom-select custom-select-sm mt-1 text-center select-boxes2" style="" v-model="prior"
                 @change="getPriorSelector()">
                 <!-- <option selected="" value="Year">Year</option> -->
@@ -31,7 +42,7 @@
               </select>
             </div>
           </div>
-          <div class="col-sm-12 col-md-4 ">
+          <div class="col-sm-12 col-md-3 ">
             <div class="text-center py-2">
               <span class="text-white text-center">Periode fin</span>
               <select v-if="prior == 'Month'" class="custom-select custom-select-sm mt-1 text-center select-boxes3"

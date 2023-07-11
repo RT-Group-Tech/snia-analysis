@@ -11,21 +11,21 @@ name: "ScatterChart",
     return{
       series: [{
         name: 'Semis',
-        data: this.generateDayWiseTimeSeries(new Date('11 Feb 2017 GMT').getTime(), 20, {
+        data: this.generateDayWiseTimeSeries(new Date('11 Feb 2022 GMT').getTime(), 20, {
           min: 10,
           max: 60
         })
       },
         {
           name: 'Recoltes',
-          data: this.generateDayWiseTimeSeries(new Date('11 Feb 2017 GMT').getTime(), 20, {
+          data: this.generateDayWiseTimeSeries(new Date('11 Feb 2022 GMT').getTime(), 20, {
             min: 10,
             max: 60
           })
         },
         {
           name: 'Attaques',
-          data: this.generateDayWiseTimeSeries(new Date('11 Feb 2017 GMT').getTime(), 30, {
+          data: this.generateDayWiseTimeSeries(new Date('11 Feb 2022 GMT').getTime(), 20, {
             min: 10,
             max: 60
           })
@@ -75,6 +75,8 @@ name: "ScatterChart",
       while (i < count) {
         var x = baseval;
         var y = Math.floor(Math.random() * (yrange.max - yrange.min + 1)) + yrange.min;
+        console.log("da:");
+        console.log(y+" | "+x);
 
         series.push([x, y]);
         baseval += 86400000;

@@ -4,7 +4,7 @@
       <div class="d-flex flex-column m-auto">
         <div class="stats-small__data text-center">
           <span class="stats-small__label text-uppercase text-dark">{{ stateblockname }}</span>
-          <h6 class="stats-small__value count my-2 text-center">35 </h6>
+          <h6 class="stats-small__value count my-2 text-center">{{val}} </h6>
           <span :class="['stats-small__percentage', percentagestatus, statusColor]">{{ percentage }}</span>
         </div>
       </div>
@@ -23,7 +23,8 @@ export default {
       statevalue: 0,
       percentagestatus: "",
       percentage: '',
-      statusColor: ''
+      statusColor: '',
+      val:Math.floor(Math.random()*100)
     }
   },
 
